@@ -21,9 +21,9 @@ let getWeb3 = new Promise(function(resolve, reject) {
     } else {
       // Fallback to localhost if no web3 injection. We've configured this to
       // use the development console's port by default.
-      var provider = new Web3.providers.HttpProvider('http://127.0.0.1:9545')
+      var provider = new Web3.providers.HttpProvider('http://127.0.0.1:9545') // 所谓的provider实际上就是区块链节点的ip与port
 
-      web3 = new Web3(provider)
+      web3 = new Web3(provider) // 从节点中获取rpc接口，也就是web3
 
       results = {
         web3: web3
